@@ -93,11 +93,104 @@ function suDiRe(){
     let numero2 = prompt("Introduce otro numero:");
     let suma = Number.parseInt(numero1) + Number.parseInt(numero2)
     let resta = (numero1 - numero2)
-    let divicion = suma / resta
-    return "La suma es = " + suma + ". La resta es = " + resta + ". La divicion de " + suma + " / " + resta + " es = " + divicion
+    let division = suma / resta
+    return "La suma es = " + suma + ". La resta es = " + resta + ". La division de " + suma + " / " + resta + " es = " + division
+}
+function pares(){
+    let numero = prompt("Introduce un numero:");
+    let n = 1
+    const arr = []
+    while (n <= numero) {
+        let par = n % 2
+        if (par === 0) {
+            arr.push(n)
+        }
+        n = n + 1     
+    }
+    return arr
+}
+function sumaN(){
+    let numero = prompt("Introduce un numero:");
+    let suma = 0
+    let n = 1
+    while (n <= numero) {
+        suma = suma + n
+        n = n + 1
+    }
+    return "La suma de los numeros desde 1 hasta " + numero + " es igual a: " + suma
+}
+function sumaPares(){
+    let numero = prompt("Introduce un numero:");
+    let suma = 0
+    let n = 1
+    while (n <= numero) {
+        let par = n % 2
+        if (par === 0) {
+            suma = suma + n    
+        } 
+        n = n + 1
+    }
+    return "Los numeros pares entre 1 y " + numero + " es igual a: " + suma
+}
+function sumaImpar(){
+    let numero = prompt("Introduce un numero:");
+    let suma = 0
+    let n = 1
+    while (n <= numero) {
+        let par = n % 2
+        if (par != 0) {
+            suma = suma + n    
+        } 
+        n = n + 1
+    }
+    return "Los numeros impares entre 1 y " + numero + " es igual a: " + suma    
+}
+function multiplos3() {
+    let numero = prompt("Introduce un numero:");
+    let n = 1
+    const arr = []
+    while (n <= numero) {
+        if ((n % 3) === 0) {
+            arr.push(n)
+        }
+        n = n + 1
+    }
+    return "Los numeros multiplos de 3 entre 1 y " + numero + " son: " + arr
+}
+function numerosAlRevez() {
+    let numero = prompt("Introduce un numero:");
+    let n = 0
+    const arr = []
+    while (n <= numero) {
+        arr.push(n)
+        n = n + 1
+    }
+    arr.reverse()
+    return arr
+}
+function numerosOrdenados() {
+    let numero = prompt("Introduce un numero:");
+    let n = 0
+    const arr = []
+    while (n <= numero) {
+        arr.push(n)
+        n = n + 1
+    }
+    return arr
+}
+function tablasN() {
+    let numero = prompt("Introduce un numero:");
+    let t = 18
+    let n = 1
+    const arr = []
+    while (n <= t) {
+        arr.push(" " + n + " x " + numero + " = " + (numero * n))
+        n = n + 1
+    }
+    return arr
 }
 
-let ejercicio = prompt("Indique ejercicio\n1) Preguntar al usuario por su nombre y luego saludar al usuario.\n2) Preguntar al usuario por su nombre, si el usuario no lo coloca, saludar al desconocido.\n3) Preguntar al usuario por su nombre y apellido y saludarlo.\n4) Preguntar al usuario si desea continuar, responder Hola o Adios.\n5) Leer nombre y edad y mostrar nombre y si es mayor de edad.\n6) Leer rol y dar acceso deacuerdo con esto.\n7) Leer un numero y mostrar el doble de n.\n8) Leer un numero y mostrar la mitad de n.\n9) Leer un numero y mostrar si es positivo negativo o cero.\n10) Leer un numero y mostrar si es par o impar.\n11) Leer dos numero y mostrar solo el mayor.\n12) Leer dos numeros y mostrar operaciones basicas: +, -, *, /, % y cuadrado.\n13) Leer dos numeros, mostras la suma dividido en la resta.");
+let ejercicio = prompt("Indique ejercicio\n1) Preguntar al usuario por su nombre y luego saludar al usuario.\n2) Preguntar al usuario por su nombre, si el usuario no lo coloca, saludar al desconocido.\n3) Preguntar al usuario por su nombre y apellido y saludarlo.\n4) Preguntar al usuario si desea continuar, responder Hola o Adios.\n5) Leer nombre y edad y mostrar nombre y si es mayor de edad.\n6) Leer rol y dar acceso deacuerdo con esto.\n7) Leer un numero y mostrar el doble de n.\n8) Leer un numero y mostrar la mitad de n.\n9) Leer un numero y mostrar si es positivo negativo o cero.\n10) Leer un numero y mostrar si es par o impar.\n11) Leer dos numero y mostrar solo el mayor.\n12) Leer dos numeros y mostrar operaciones basicas: +, -, *, /, % y cuadrado.\n13) Leer dos numeros, mostras la suma dividido en la resta.\n14) Leer un numero y mostras los numeros pares que contiene.\n15) Pedir un número, mostrar la suma total desde 1 hasta n.\n16) Pedir un número, mostrar la suma de los números pares desde 1 hasta n.\n17) Pedir un número, mostrar la suma de los números impares desde 1 hasta n.\n18) Pedir un número, mostrar multiplos de 3 desde 1 hasta n.\n19) Pedir un número, mostrar los números desde n hasta 0.\n20) Pedir un número, mostrar los números desde 0 hasta n.\n21) Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 18.");
 switch (ejercicio){
     case "1":
         /* 1) Preguntar al usuario por su nombre y luego saludar al usuario.*/
@@ -156,5 +249,44 @@ switch (ejercicio){
     case "13":
         /* 13) Leer dos numeros, mostras la suma dividido en la resta. */
         document.write(suDiRe());
+        break
+    case "14":
+        /* 14) Leer un numero y mostras los numeros pares que contiene. */
+        document.write(pares());
+        break
+    case "15":
+        /* 15) Pedir un número, mostrar la suma total desde 1 hasta n. */
+        document.write(sumaN());
+        break
+    case "16":
+        /* 16) Pedir un número, mostrar la suma de los números pares desde 1 hasta n. */
+        document.write(sumaPares());
+        break
+    case "17":
+        /* 17) Pedir un número, mostrar la suma de los números impares desde 1 hasta n. */
+        document.write(sumaImpar());
+        break
+    case "18":
+        /* 18) Pedir un número, mostrar multiplos de 3 desde 1 hasta n. */
+        document.write(multiplos3());
+        break
+    case "19":
+        /* 19) Pedir un número, mostrar los números desde n hasta 0. */
+        document.write(numerosAlRevez());
+        break
+    case "20":
+        /* 20) Pedir un número, mostrar los números desde 0 hasta n. */
+        document.write(numerosOrdenados());
+        break
+    case "21":
+        /* 21) Pedir un número, mostrar su tabla de multiplicar desde 0 hasta 18. */
+        arr = (tablasN());
+        n = 0
+        str = ""
+        while (n <= arr.length - 1) {
+            str += arr([n]);
+            n = n + 1
+        }
+        document.write(str)
         break
 }
